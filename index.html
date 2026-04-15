@@ -6,33 +6,43 @@
     <title>Intesa | Soluciones Tecnológicas</title>
     <style>
         :root { 
-            --dark-bg: #0a192f; /* Azul noche profundo */
-            --card-bg: #112240; /* Azul marino oscuro */
-            --accent: #64ffda;  /* Turquesa/Cian brillante */
-            --blue-light: #306aff; /* Azul eléctrico */
-            --text-main: #ccd6f6; 
-            --text-dim: #8892b0;
+            --bg-main: #ffffff;      /* Fondo Blanco */
+            --blue-dark: #0a192f;    /* Azul muy oscuro para texto principal */
+            --blue-medium: #112240;  /* Azul para tarjetas */
+            --blue-light: #306aff;   /* Azul eléctrico para botones y bordes */
+            --text-body: #444444;    /* Gris oscuro para lectura fácil */
         }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--dark-bg); color: var(--text-main); margin: 0; line-height: 1.6; }
-        header { background: #020c1b; padding: 3rem 1rem; text-align: center; border-bottom: 2px solid var(--blue-light); }
-        h1 { color: var(--accent); margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-main); color: var(--text-body); margin: 0; line-height: 1.6; }
+        
+        header { background: var(--bg-main); padding: 2rem 1rem; text-align: center; border-bottom: 1px solid #eeeeee; }
+        
+        /* Estilo para el Logo */
+        .logo { max-width: 180px; height: auto; margin-bottom: 1rem; }
+        
+        h1 { color: var(--blue-dark); margin: 0; font-size: 2.2rem; letter-spacing: 1px; }
         .container { max-width: 900px; margin: auto; padding: 2rem; }
-        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid transparent; transition: 0.3s; }
-        .card:hover { border-color: var(--blue-light); transform: translateY(-5px); }
-        h2 { color: var(--blue-light); border-bottom: 1px solid #233554; padding-bottom: 10px; }
-        h3 { color: var(--accent); margin-top: 0; }
+        
+        .card { background: #f8f9fa; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid #e9ecef; transition: 0.3s; }
+        .card:hover { border-color: var(--blue-light); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        
+        h2 { color: var(--blue-light); border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-top: 2rem; }
+        h3 { color: var(--blue-dark); margin-top: 0; }
+        
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
-        .gallery img { width: 100%; border-radius: 8px; border: 1px solid var(--blue-light); }
-        footer { text-align: center; padding: 3rem; color: var(--text-dim); font-size: 0.9rem; }
-        .btn { background: transparent; color: var(--accent); border: 1px solid var(--accent); padding: 12px 25px; text-decoration: none; border-radius: 4px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: rgba(100, 255, 218, 0.1); }
+        .gallery img { width: 100%; border-radius: 8px; border: 1px solid #dddddd; object-fit: cover; }
+        
+        footer { text-align: center; padding: 3rem; color: #999999; font-size: 0.9rem; border-top: 1px solid #eeeeee; }
+        
+        .btn { background: var(--blue-light); color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; display: inline-block; }
+        .btn:hover { background: var(--blue-dark); box-shadow: 0 4px 15px rgba(48, 106, 255, 0.3); }
     </style>
 </head>
 <body>
 
 <header>
+    <img src="img/logo.png" alt="Logo Intesa" class="logo">
     <h1>INTESA</h1>
-    <p style="color: var(--text-dim);">Servicios Técnicos Especializados en Computación</p>
+    <p style="color: var(--text-body);">Servicios Técnicos Especializados en Computación</p>
 </header>
 
 <div class="container">
@@ -40,24 +50,31 @@
         <h2>Nuestros Servicios</h2>
         <div class="card">
             <h3>🛠️ Mantenimiento Profesional</h3>
-            <p>Limpieza profunda, cambio de pasta térmica y diagnóstico preventivo para equipos de alto rendimiento.</p>
+            <p>Limpieza profunda, cambio de pasta térmica y diagnóstico preventivo para laptops y PC desktop.</p>
         </div>
         <div class="card">
             <h3>🚀 Optimización y Upgrades</h3>
-            <p>Aumentamos la velocidad de tu equipo con discos sólidos (SSD) y ampliación de memoria RAM.</p>
+            <p>Mejora el rendimiento de tu equipo con discos sólidos (SSD) y ampliación de memoria RAM.</p>
+        </div>
+        <div class="card">
+            <h3>💻 Soporte Técnico</h3>
+            <p>Formateo, instalación de software y eliminación de virus para un equipo seguro.</p>
         </div>
     </section>
 
     <section>
         <h2>Galería de Trabajo</h2>
         <div class="gallery">
-            <img src="img/reparacion1.jpg" alt="Mantenimiento de laptop">
-            <img src="img/reparacion2.jpg" alt="Instalación de componentes">
+            <img src="img/mantenimiento.jpg" alt="Mantenimiento de equipo">
+            <img src="img/upgrade.jpg" alt="Instalación de SSD/RAM">
         </div>
     </section>
 
     <section style="text-align: center; margin-top: 4rem;">
-        <a href="https://wa.me/502XXXXXXXX" class="btn">SOLICITAR COTIZACIÓN</a>
+        <h2>¿Necesitas ayuda con tu equipo?</h2>
+        <p>Estamos ubicados en Ciudad de Guatemala.</p>
+        <br>
+        <a href="https://wa.me/50242331111" class="btn">ENVIAR WHATSAPP</a>
     </section>
 </div>
 
